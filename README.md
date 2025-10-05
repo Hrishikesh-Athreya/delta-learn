@@ -42,7 +42,7 @@ Traditional corporate learning assumes a “blank slate.” In reality, most lea
 | **Continuous Updates** | Adapts courses automatically when regulations, standards, or systems evolve. |
 | **Seamless Integration (Future scope)** | Exports to LMS (SCORM/xAPI), internal wikis, or corporate learning dashboards. |
 
-## Architecture
+## Architecture 🧱
 <img width="3127" height="2034" alt="delta-learn" src="https://github.com/user-attachments/assets/db2ae253-ae49-489b-9799-a604cfebaf40" />
 
 ## 🚀 How to Run
