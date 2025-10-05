@@ -34,10 +34,10 @@ Traditional corporate learning assumes a “blank slate.” In reality, most lea
 
 | Feature | Description |
 |----------|--------------|
-| **Knowledge Mapping Engine** | Builds a concept graph of what the learner already knows and aligns it with the target domain. |
+| **Knowledge Mapping** | Finds out the user's background and aligns it with the target domain. |
 | **Delta-Based Learning** | Uses *differences* as the teaching scaffold — focusing on contrast and analogy to deepen understanding. |
-| **Adaptive Content Generation** | AI-generated modules, diagrams, and quizzes tailored to the learner’s background. |
+| **Adaptive Content Generation** | AI-generated modules and slides tailored to the learner’s background. |
 | **Cross-Domain Ontology** | Works across verticals — payments, healthcare, accounting, law, tech, etc. |
 | **Dynamic Assessment** | Evaluates understanding through contextual scenarios, not rote recall. |
 | **Continuous Updates** | Adapts courses automatically when regulations, standards, or systems evolve. |
-| **Seamless Integration** | Exports to LMS (SCORM/xAPI), internal wikis, or corporate learning dashboards. |
+| **Seamless Integration (Future scope)** | Exports to LMS (SCORM/xAPI), internal wikis, or corporate learning dashboards. |
