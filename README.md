@@ -72,6 +72,13 @@ npm i
 npm run dev
 ```
 
+## 🎬 Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/emFQqpqGlKo/0.jpg)](https://youtu.be/emFQqpqGlKo)
+
+> Click the image to watch the demo.
+
+
 
 
 
