@@ -3,7 +3,7 @@
 
 Professionals moving across **countries**, **industries**, or **regulatory systems** often face steep learning curves — not because they lack expertise, but because their existing mental models aren’t leveraged.  
 
-Traditional corporate learning assumes a “blank slate.” In reality, most learners already understand **80–90%** of underlying concepts — what’s missing is context and mapping.  
+Traditional corporate learning assumes a “blank slate.” In reality, most learners already understand **80–82%** of underlying concepts — what’s missing is context and mapping.  
 
 📊 **Key Metrics Highlighting the Problem**
 - **49%** of employees are willing to relocate internationally for work, yet **only 29%** feel confident adapting to new local systems. *(Ipsos, 2024)*  
