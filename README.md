@@ -64,8 +64,14 @@ export OPENAI_API_KEY="your-openai-api-key"
 ```
 
 ### 4️⃣ Setup UI
+
 ```bash
-npm i
+cd frontend
+```
+
+
+```bash
+npm i --legacy-peer-deps
 ```
 
 ```
