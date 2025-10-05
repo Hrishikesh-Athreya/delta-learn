@@ -623,8 +623,8 @@ def clean_schema_for_gemini(schema: Any) -> Any:
 
 cleaned_schema = clean_schema_for_gemini(SlideResult.model_json_schema())
 
-def get_output_from_llm(slide: SlideDesc, info):
-    query = "Please answer the question: " + slide.desc + "From the information. " + str(info) + ". Don't use another other information, use only what I gave you. Make sure to output in the form of the template. The template information is as follows: " + templates
+def get_output_from_llm(slide: SlideDesc, info, _from, _to):
+    query = "Please answer the question: " + slide.desc + "From the information. " + str(info) + "If there is comparison required, compare "+str(_from) +" with "+ str(_to) + " . Don't use another other information, use only what I gave you. Make sure to output in the form of the template. The template information is as follows: " + templates
     return client.models.generate_content(
         model='',
         contents=query,
@@ -635,24 +635,29 @@ def get_output_from_llm(slide: SlideDesc, info):
     )
 
 
-def build_course(course_desc: CourseDesc) -> Course:
+def build_course(course_desc: CourseDesc, _from, _to) -> Course:
     modules_out: List[Module] = []
 
     for mod in course_desc.modules:
         slides_out: List[Slide] = []
         for slide_desc in mod.slides:
-            s = get_output_from_llm(slide_desc, mod.information)
+            s = get_output_from_llm(slide_desc, mod.information, _from, _to)
             slide_obj = SlideResult.model_validate_json(s.text)
             slides_out.append(slide_obj.slide)
         modules_out.append(Module(slides=slides_out))
 
     return Course(modules=modules_out)
 
+
+background_mapping = {1: ("India, USA")}
+course_map = {1: course} #ID 1 maps India to US
+
 COURSE_FILE = Path("data/input/course_structure.json")
 def recreate_course():
     course_desc = get_course_desc(json.loads(COURSE_FILE.read_text(encoding="utf-8")))
-    get_course_information(course_desc)
-    return build_course(course_desc)
+    for id, from_to_mapping in background_mapping.items():
+        get_course_information(course_desc)
+        return build_course(course_desc, from_to_mapping[0], from_to_mapping[1])
 
 
 
@@ -681,8 +686,6 @@ def poll_endpoint(url: str, interval: int = 5):
         time.sleep(interval)
 
 course: Course = None
-
-course_map = {1: course}
 
 
 @app.get("/course/get")
