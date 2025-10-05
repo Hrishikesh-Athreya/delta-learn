@@ -1,0 +1,9 @@
+model_list:
+  - model_name: gemini-2.0-flash-lite
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key:
+  - model_name: gemini-text-embedding
+    litellm_params:
+      model: gemini/gemini-embedding-001
+      api_key:
